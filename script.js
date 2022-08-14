@@ -207,7 +207,8 @@ let currentQuestion,
   prevQuestions = [],
   counter = 0,
   numberCorrect = 0,
-  numberWrong = 0;
+  numberWrong = 0,
+  higgestPoint = 0;
 
 const setDots = () => dots.children[counter].classList.add("bg-primary");
 
@@ -220,6 +221,11 @@ const calcPoint = () => `
 <p class="mb-0 fs-4">Number of correct answer: ${numberCorrect} 😀</p>
 <p class="mb-0 fs-4">Number of wrong answer: ${numberWrong} 😏</p>
 <p class="mb-0 fs-4">Your point is ${numberCorrect * 20} 🥳<p>
+<p class="mb-0 fs-4">Higgest Point: ${
+  numberCorrect * 20 > higgestPoint
+    ? (higgestPoint = numberCorrect * 20)
+    : higgestPoint
+}</p>
 `;
 
 function timer() {
