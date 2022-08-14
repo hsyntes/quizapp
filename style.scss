@@ -1,0 +1,176 @@
+$color-primary: #00e0ff;
+$color-secondary: #ff9a00;
+$color-dark: #1b262c;
+$color-light: #f3f3f3;
+$color-white: #fff;
+$color-success: #3ccf4e;
+$color-danger: #d72323;
+$color-warning: #f9ed69;
+$color-muted: rgba(27, 38, 44, 0.5);
+
+@mixin fontSize($size) {
+  font-size: $size !important;
+}
+
+@mixin fontWeight($weight) {
+  font-weight: $weight !important;
+}
+
+@mixin background($color) {
+  background: $color !important;
+}
+
+@mixin color($color) {
+  color: $color !important;
+}
+
+@mixin btn($bg-color, $fr-color) {
+  @include background($bg-color);
+  @include color($fr-color);
+  &:hover {
+    @include background(lighten($color: $bg-color, $amount: 5));
+    // box-shadow: none !important;
+  }
+  &:active {
+    @include background(lighten($color: $bg-color, $amount: 10));
+    transform: translateY(5%);
+  }
+}
+
+.btn {
+  box-shadow: none !important;
+  border: none !important;
+  transition: all 0.2s ease-out;
+}
+
+.btn.text-muted {
+  &:hover {
+    @include color($color-dark);
+  }
+}
+
+.btn,
+a {
+  @include fontSize(1.6rem);
+  @include fontWeight(500);
+}
+
+.btn-primary {
+  @include btn($color-primary, $color-dark);
+}
+
+.btn-success {
+  @include btn($color-success, $color-dark);
+}
+
+.btn-danger {
+  @include btn($color-danger, $color-light);
+}
+
+.btn-light {
+  @include btn($color-light, $color-dark);
+}
+
+.bg-primary {
+  @include background($color-primary);
+}
+
+.bg-light {
+  @include background($color-light);
+}
+
+.text-danger {
+  @include color($color-danger);
+}
+
+.text-dark {
+  @include color($color-dark);
+}
+
+.text-muted {
+  @include color($color-muted);
+}
+
+.rounded {
+  border-radius: 10px !important;
+}
+
+.shadow {
+  box-shadow: 0 0 10px rgba(27, 38, 44, 0.25) !important;
+}
+
+.fs-6,
+h6 {
+  @include fontSize(1.2rem);
+}
+
+.fs-5,
+h5,
+p {
+  @include fontSize(1.4rem);
+}
+
+.fs-4,
+h4 {
+  @include fontSize(1.6rem);
+}
+
+.fs-3,
+h3 {
+  @include fontSize(2.4rem);
+}
+
+.fs-2,
+h2 {
+  @include fontSize(4.8rem);
+}
+
+.fs-1,
+h1 {
+  @include fontSize(6.4rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include fontWeight(700);
+}
+
+html {
+  font-size: 10px !important;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgba(114, 255, 197, 1) 21%,
+    rgba(0, 224, 255, 1) 100%
+  );
+}
+
+.container {
+  margin: auto;
+  .dot {
+    width: 14px;
+    height: 14px;
+    background: $color-muted;
+  }
+}
+
+@keyframes btnFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0%);
+  }
+}

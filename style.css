@@ -1,0 +1,173 @@
+.btn {
+  box-shadow: none !important;
+  border: none !important;
+  transition: all 0.2s ease-out;
+}
+
+.btn.text-muted:hover {
+  color: #1b262c !important;
+}
+
+.btn,
+a {
+  font-size: 1.6rem !important;
+  font-weight: 500 !important;
+}
+
+.btn-primary {
+  background: #00e0ff !important;
+  color: #1b262c !important;
+}
+.btn-primary:hover {
+  background: #1ae3ff !important;
+}
+.btn-primary:active {
+  background: #33e6ff !important;
+  transform: translateY(5%);
+}
+
+.btn-success {
+  background: #3ccf4e !important;
+  color: #1b262c !important;
+}
+.btn-success:hover {
+  background: #50d461 !important;
+}
+.btn-success:active {
+  background: #65d973 !important;
+  transform: translateY(5%);
+}
+
+.btn-danger {
+  background: #d72323 !important;
+  color: #f3f3f3 !important;
+}
+.btn-danger:hover {
+  background: #de3535 !important;
+}
+.btn-danger:active {
+  background: #e24b4b !important;
+  transform: translateY(5%);
+}
+
+.btn-light {
+  background: #f3f3f3 !important;
+  color: #1b262c !important;
+}
+.btn-light:hover {
+  background: white !important;
+}
+.btn-light:active {
+  background: white !important;
+  transform: translateY(5%);
+}
+
+.bg-primary {
+  background: #00e0ff !important;
+}
+
+.bg-light {
+  background: #f3f3f3 !important;
+}
+
+.text-danger {
+  color: #d72323 !important;
+}
+
+.text-dark {
+  color: #1b262c !important;
+}
+
+.text-muted {
+  color: rgba(27, 38, 44, 0.5) !important;
+}
+
+.rounded {
+  border-radius: 10px !important;
+}
+
+.shadow {
+  box-shadow: 0 0 10px rgba(27, 38, 44, 0.25) !important;
+}
+
+.fs-6,
+h6 {
+  font-size: 1.2rem !important;
+}
+
+.fs-5,
+h5,
+p {
+  font-size: 1.4rem !important;
+}
+
+.fs-4,
+h4 {
+  font-size: 1.6rem !important;
+}
+
+.fs-3,
+h3 {
+  font-size: 2.4rem !important;
+}
+
+.fs-2,
+h2 {
+  font-size: 4.8rem !important;
+}
+
+.fs-1,
+h1 {
+  font-size: 6.4rem !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700 !important;
+}
+
+html {
+  font-size: 10px !important;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  height: 100vh;
+  background: radial-gradient(circle, rgb(114, 255, 197) 21%, rgb(0, 224, 255) 100%);
+}
+
+.container {
+  margin: auto;
+}
+.container .dot {
+  width: 14px;
+  height: 14px;
+  background: rgba(27, 38, 44, 0.5);
+}
+
+@-webkit-keyframes btnFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%);
+  }
+}
+
+@keyframes btnFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%);
+  }
+}/*# sourceMappingURL=style.css.map */
